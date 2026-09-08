@@ -1,0 +1,44 @@
+{
+  "exampleOnly": true,
+  "contractVersion": "draft-1",
+  "modelInput": {
+    "kind": "clarification",
+    "delivery": "wait",
+    "presentation": "interview",
+    "title": "Choose the first release scope",
+    "questions": [
+      {
+        "id": "first_slice",
+        "type": "single",
+        "text": "Which first slice should we implement?",
+        "required": true,
+        "choices": [
+          {"id": "core_lifecycle", "label": "Ask + Interview with durable answers", "suggested": true},
+          {"id": "ask_only", "label": "Compact Ask first"},
+          {"id": "revise", "label": "Revise the scope"}
+        ],
+        "allowOtherText": true,
+        "allowComment": true
+      },
+      {
+        "id": "constraints",
+        "type": "text",
+        "text": "Any additional constraints?",
+        "required": false
+      }
+    ]
+  },
+  "hostOwnedEnvelope": {
+    "requestId": "example-request",
+    "revision": 1,
+    "ownerBinding": "resolved by the host, never model input",
+    "originBinding": "conversation, execution, tool call and surface resolved by host",
+    "requestStatus": "pending",
+    "deliveryStatus": "not_queued"
+  },
+  "notes": [
+    "Suggested is display metadata, not a selected answer.",
+    "This file is illustrative JSON, not a validated production schema.",
+    "No credential or real user identity belongs in model-controlled fields."
+  ]
+}
